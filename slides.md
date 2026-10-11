@@ -159,22 +159,20 @@ color: gray-light
 
 :: title ::
 
-# OpenXPKI: an enterprise-grade PKI platform
+# Complete online capabilities, for users and RA
 
 :: content ::
 
-<mdi-server-network /> **OpenXPKI** — open-source trustcenter software for X.509 certificate lifecycle management, established 2009, Apache 2.0.
+Built on <b>OpenXPKI</b> — enterprise-grade open-source PKI: workflow-driven lifecycle, EST / SCEP / ACME enrollment, HSM-ready crypto layer.
 
-**Why it fits our requirements:**
-
-- Workflow-driven lifecycle — request, approval, issuance, revocation
-- Multi-protocol enrollment — **EST · SCEP · ACME** · REST API
-- Flexible crypto layer — HSM via PKCS#11, OpenSSL backend
-- Multi-tenant PKI realms with seamless CA rollover
-- YAML-based configuration — auditable and version-controlled
-- Authentication — LDAP / SSO · password · client certificate
-
-<img src="/openxpki.svg" style="position:absolute;top:-65px;right:-15px;width:700px;opacity:0.12;z-index:-1;" />
+<div class="check-grid mt-2">
+  <div><mdi-account-key /><div><strong>Online request, automatic issuance</strong><span> IHEP-account login, online request for user / robot / host certificates; server-side RSA 4096 keys, automatic issuance after RA approval.</span></div></div>
+  <div><mdi-robot-industrial /><div><strong>Smooth legacy migration</strong><span> IHEP-2013 personal certificates migrate in one step, identity locked server-side; legacy hosts migrate via EST — no manual work.</span></div></div>
+  <div><mdi-autorenew /><div><strong>EST auto-renewal for hosts</strong><span> Host-side scripts renew within 45 days of expiry and hot-reload services — a zero-ops lifecycle.</span></div></div>
+  <div><mdi-file-remove-outline /><div><strong>Online revocation, automatic CRL</strong><span> Single or batch revocation online; CRLs issued on schedule and published to public URLs, per the CP/CPS.</span></div></div>
+  <div><mdi-bell-ring-outline /><div><strong>Lifecycle e-mail notifications</strong><span> Pending, issued, rejected and expiring-soon events notify applicants and the RA automatically.</span></div></div>
+  <div><mdi-shield-account /><div><strong>RA online workbench</strong><span> Approval queue, certificate search, workflow tracking, batch approval — all logged and auditable.</span></div></div>
+</div>
 
 ---
 layout: top-title
@@ -285,19 +283,19 @@ color: gray-light
 
 :: title ::
 
-# Automation beyond the WebUI
+# Auditable and monitored end to end
 
 :: content ::
 
-<div class="cap-grid mt-4">
-  <div><mdi-refresh-auto /><div><strong>EST auto-renewal for hosts</strong><span>Host certificates renew themselves within 45 days of expiry — no operator action, no expired service certificates.</span></div></div>
-  <div><mdi-swap-horizontal /><div><strong>Legacy host migration</strong><span>The same script migrates IHEP-2013 host certificates to the new CA via mTLS, one time per hostname.</span></div></div>
-  <div><mdi-file-certificate-outline /><div><strong>Automatic CRL</strong><span>Revocation lists are generated and published automatically — relying parties see revocations without delay.</span></div></div>
-  <div><mdi-bell-ring-outline /><div><strong>Lifecycle notifications</strong><span>Approval, issuance, rejection and expiry reminders reach users and RA by e-mail, automatically.</span></div></div>
+<div class="check-grid mt-3">
+  <div><mdi-database-search /><div><strong>Full audit trail</strong><span> Every WebUI, RA and EST access and operation is recorded in the database — searchable by person, time and action.</span></div></div>
+  <div><mdi-monitor-dashboard /><div><strong>Centralized logs and dashboards</strong><span> Component logs persist to Elasticsearch; Grafana status, audit and security panels are already in production.</span></div></div>
+  <div><mdi-two-factor-authentication /><div><strong>Hardened operations</strong><span> Server logins require an independent second factor; every login notifies the administrators by e-mail.</span></div></div>
+  <div><mdi-database-sync-outline /><div><strong>Backup and recovery</strong><span> MariaDB dual replicas with scheduled backups of certificate and workflow data — meeting audit and recovery requirements.</span></div></div>
 </div>
 
 <AdmonitionType type='info'>
-Robot certificates cover non-human identities — pilots, production automation — each with a responsible person, managed through the same workflow.
+Every issuance notifies both the RA and the applicant — anomalous issuance becomes visible immediately, strengthening the trust story behind the accreditation.
 </AdmonitionType>
 
 ---

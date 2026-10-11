@@ -8,6 +8,40 @@
   padding-bottom: 0.45rem;
 }
 
+.check-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.7rem;
+}
+
+.check-grid > div {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.7rem;
+  align-items: start;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid #d9dee7;
+  border-radius: 0.65rem;
+  background: white;
+}
+
+.check-grid svg {
+  width: 1.55rem;
+  height: 1.55rem;
+  color: #16a34a;
+  margin-top: 0.15rem;
+}
+
+.check-grid strong {
+  font-size: 1rem;
+}
+
+.check-grid span {
+  font-size: 0.88rem;
+  line-height: 1.32;
+  color: #475569;
+}
+
 .who-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
