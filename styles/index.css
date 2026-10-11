@@ -33,7 +33,9 @@
 }
 
 .check-grid strong {
+  display: block;
   font-size: 1rem;
+  margin-bottom: 0.1rem;
 }
 
 .check-grid span {
@@ -56,7 +58,9 @@
 }
 
 .who-grid strong {
+  display: block;
   font-size: 1.08rem;
+  margin-bottom: 0.15rem;
 }
 
 .who-grid span {
@@ -90,7 +94,9 @@
 }
 
 .cap-grid strong {
+  display: block;
   font-size: 1.05rem;
+  margin-bottom: 0.1rem;
 }
 
 .cap-grid span {
