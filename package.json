@@ -1,0 +1,16 @@
+{
+  "name": "clhcp2026-ihepca",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "slidev --host 0.0.0.0",
+    "build": "slidev build",
+    "postbuild": "node scripts-strip-fonts.cjs",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@iconify-json/mdi": "^1.2.3",
+    "@slidev/cli": "^52.15.2",
+    "slidev-theme-neversink": "^0.4.1"
+  }
+}

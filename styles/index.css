@@ -1,0 +1,66 @@
+.slidev-layout table {
+  font-size: 0.92rem;
+}
+
+.slidev-layout table th,
+.slidev-layout table td {
+  padding-top: 0.45rem;
+  padding-bottom: 0.45rem;
+}
+
+.who-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.9rem;
+}
+
+.who-grid > div {
+  padding: 0.9rem 1rem;
+  border: 1px solid #d9dee7;
+  border-radius: 0.65rem;
+  background: white;
+}
+
+.who-grid strong {
+  font-size: 1.08rem;
+}
+
+.who-grid span {
+  font-size: 0.93rem;
+  line-height: 1.4;
+  color: #475569;
+}
+
+.cap-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.9rem;
+}
+
+.cap-grid > div {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.7rem;
+  align-items: start;
+  padding: 0.9rem 1rem;
+  border: 1px solid #d9dee7;
+  border-radius: 0.65rem;
+  background: white;
+}
+
+.cap-grid svg {
+  width: 1.6rem;
+  height: 1.6rem;
+  color: #0e7490;
+  margin-top: 0.15rem;
+}
+
+.cap-grid strong {
+  font-size: 1.05rem;
+}
+
+.cap-grid span {
+  font-size: 0.93rem;
+  line-height: 1.4;
+  color: #475569;
+}
