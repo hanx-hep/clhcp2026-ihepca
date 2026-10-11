@@ -105,9 +105,11 @@ color: gray-light
   <div><strong><mdi-earth /> International trust</strong><span> As part of the IGTF / APGridPMA trust framework, IHEP-issued identities are recognized by WLCG sites worldwide.</span></div>
 </div>
 
+<div class="mt-5">
 <AdmonitionType type='important'>
 The IHEP CA is <b>shared national infrastructure</b>: one trust anchor behind the distributed computing of essentially every HEP collaboration in China — including future experiments such as CEPC.
 </AdmonitionType>
+</div>
 
 ---
 layout: section
@@ -294,9 +296,11 @@ color: gray-light
   <div><mdi-database-sync-outline /><div><strong>Backup and recovery</strong><span> MariaDB dual replicas with scheduled backups of certificate and workflow data — meeting audit and recovery requirements.</span></div></div>
 </div>
 
+<div class="mt-5">
 <AdmonitionType type='info'>
 Every issuance notifies both the RA and the applicant — anomalous issuance becomes visible immediately, strengthening the trust story behind the accreditation.
 </AdmonitionType>
+</div>
 
 ---
 layout: section
@@ -312,27 +316,29 @@ color: gray-light
 
 :: title ::
 
-# Accreditation and migration timeline
+# Timeline: from prototype to IGTF accreditation
 
 :: content ::
 
-<div style="text-align: center; max-width: 92%; margin: 0 auto;">
+<div style="text-align: center; max-width: 96%; margin: 0.3rem auto;">
 
-```mermaid {scale: 0.72}
-flowchart LR
-    A["Now<br/>new CA in production<br/>IGTF / APGridPMA accreditation"] --> B["Parallel run<br/>old CA — revoke only<br/>new CA — full service"] --> C["End of 2026<br/>old CA shut down<br/>old certs unrecognized"]
+```mermaid {scale: 0.55}
+timeline
+    Late 2025 : Core functionality complete
+    2026-02 : First contact with APGridPMA chair
+    2026-03 : ISGC — formal application submitted
+    2026-04~07 : Review period, sustained follow-up
+    2026-08 : IGTF 1.145 admits the IHEP-2026 hierarchy
+    End of 2026 : IHEP-2013 old root expires
 ```
 
 </div>
 
-**Two migration paths:**
-
-- **New users / expired certificates** — SSO login → online request → RA approval → download
-- **Valid IHEP-2013 holders** — dedicated online migration entry, once per account
-
-<AdmonitionType type='important'>
-After the old CA retires at the <b>end of 2026</b>, certificates it issued will no longer be recognized by grid services — migration is not optional.
+<div class="mt-4">
+<AdmonitionType type='warning'>
+<b>The end-2026 expiry of the IHEP-2013 root is the hard deadline for this transition.</b> The new CA is accredited and in production; a unified migration notice gives every user a sufficient window to switch.
 </AdmonitionType>
+</div>
 
 ---
 layout: top-title
@@ -349,7 +355,7 @@ color: gray-light
 - **Stronger security** — 1024-bit root retired; RSA 4096 server-side key generation; automated CRL
 - **Better service** — SSO login, online RA approval, same-day issuance, e-mail notifications
 - **Automation** — EST renewal for hosts, legacy migration, API access for bulk integration
-- **Trust continuity** — IGTF / APGridPMA accreditation; parallel run; old CA retires end of 2026
+- **Trust established** — admitted into IGTF 1.145 (Aug 2026); old CA retires at the end of 2026
 - **Shared foundation** — one trust anchor for LHC, JUNO, Belle II, LHAASO… and CEPC
 
 <AdmonitionType type='note'>
