@@ -100,9 +100,9 @@ color: gray-light
 :: content ::
 
 <div class="who-grid mt-4">
-  <div><strong><mdi-atom /> LHC experiments</strong><span>Chinese ATLAS, CMS and LHCb groups: user certificates, robot certificates, host certificates for sites and services in the WLCG framework.</span></div>
-  <div><strong><mdi-flask /> Domestic experiments</strong><span>JUNO, Belle II, LHAASO and others: grid computing identity for production, analysis and data transfer.</span></div>
-  <div><strong><mdi-earth /> International trust</strong><span>As part of the IGTF / APGridPMA trust framework, IHEP-issued identities are recognized by WLCG sites worldwide.</span></div>
+  <div><strong><mdi-atom /> LHC experiments</strong><span> Chinese ATLAS, CMS and LHCb groups: user certificates, robot certificates, host certificates for sites and services in the WLCG framework.</span></div>
+  <div><strong><mdi-flask /> Domestic experiments</strong><span> JUNO, Belle II, LHAASO and others: grid computing identity for production, analysis and data transfer.</span></div>
+  <div><strong><mdi-earth /> International trust</strong><span> As part of the IGTF / APGridPMA trust framework, IHEP-issued identities are recognized by WLCG sites worldwide.</span></div>
 </div>
 
 <AdmonitionType type='important'>
@@ -174,7 +174,7 @@ color: gray-light
 - YAML-based configuration — auditable and version-controlled
 - Authentication — LDAP / SSO · password · client certificate
 
-<img src="/openxpki.svg" style="position:absolute;top:-65px;right:-15px;width:700px;opacity:0.2;z-index:-1;" />
+<img src="/openxpki.svg" style="position:absolute;top:-65px;right:-15px;width:700px;opacity:0.12;z-index:-1;" />
 
 ---
 layout: top-title
@@ -189,7 +189,7 @@ color: gray-light
 
 <div style="text-align: center; max-width: 88%; margin: 0 auto;">
 
-```mermaid {scale: 0.62}
+```mermaid {scale: 0.64}
 graph LR
     User[User] -->|HTTPS| WebUI[WebUI]
     User -->|EST/API| API[Automation Interface]
@@ -205,7 +205,9 @@ graph LR
 
 </div>
 
-**Layers:** user → access (WebUI / EST / API) → business logic (workflow, RA) → data → publishing (certificates, CRL)
+<div class="text-center mt-2">
+<b>Layers:</b> user → access (WebUI / EST / API) → business logic (workflow, RA) → data → publishing (certificates, CRL)
+</div>
 
 ---
 layout: top-title-two-cols
@@ -231,7 +233,7 @@ color: gray-light
 
 **Request → issue, fully online:**
 
-```mermaid {scale: 0.6}
+```mermaid {scale: 0.54}
 sequenceDiagram
     User->>WebUI: SSO login, request
     WebUI->>OpenXPKI: workflow + RA review
@@ -243,6 +245,38 @@ sequenceDiagram
 <AdmonitionType type='note'>
 From "days, with human relay" to "same-day, self-service".
 </AdmonitionType>
+
+---
+layout: top-title-two-cols
+color: gray-light
+align: c-lt-lt
+---
+
+:: title ::
+
+# The new WebUI: gridca.ihep.ac.cn
+
+:: left ::
+
+<AdmonitionType type='info'>
+<mdi-web /> A public landing page explains the service, trust and history — before asking for any credentials.
+</AdmonitionType>
+
+**Four authentication entries:**
+
+- **IHEP Account (SSO)** — recommended for all users
+- **Client certificate** — returning certificate holders
+- **Client certificate (RA)** — RA operators
+- **IHEP-2013 certificate migration** — one-time identity carry-over
+
+**Also public:** CA certificates, CRLs and policy documents for relying parties.
+
+:: right ::
+
+<div style="text-align: center;">
+  <img src="/gridca_webui.png" style="width: 100%; border-radius: 12px; border: 1px solid #e5e7eb; box-shadow: 0 6px 18px rgba(15,23,42,0.12);" />
+  <div style="font-size:0.8em;color:#888;margin-top:6px;"><mdi-web /> gridca.ihep.ac.cn — the new CA web interface</div>
+</div>
 
 ---
 layout: top-title
@@ -286,7 +320,7 @@ color: gray-light
 
 <div style="text-align: center; max-width: 92%; margin: 0 auto;">
 
-```mermaid {scale: 0.62}
+```mermaid {scale: 0.72}
 flowchart LR
     A["Now<br/>new CA in production<br/>IGTF / APGridPMA accreditation"] --> B["Parallel run<br/>old CA — revoke only<br/>new CA — full service"] --> C["End of 2026<br/>old CA shut down<br/>old certs unrecognized"]
 ```
