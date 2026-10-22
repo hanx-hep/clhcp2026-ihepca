@@ -7,13 +7,13 @@ routerMode: hash
 lineNumbers: true
 fonts: false
 neversink_string: "CLHCP2026 · Wuhan"
-title: The Upgrade and Modernization of the IHEP Grid CA
+title: The Upgrade of the China Grid Certification Authority
 titleTemplate: '%s - Xiao Han'
 favicon: /ihep_dci.svg
 transition: fade
 ---
 
-### The Upgrade and Modernization of the IHEP Grid Certification Authority
+### The Upgrade of the China Grid Certification Authority
 
 #### <mdi-certificate /> OpenXPKI · Automated Certificate Lifecycle · Trust for Chinese HEP Computing
 
