@@ -69,6 +69,32 @@
   color: #475569;
 }
 
+.experiment-logos {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  align-items: end;
+  gap: 1rem;
+  margin-top: 1.4rem;
+}
+
+.experiment-logos figure {
+  margin: 0;
+  text-align: center;
+}
+
+.experiment-logos img {
+  width: 100%;
+  height: 54px;
+  object-fit: contain;
+}
+
+.experiment-logos figcaption {
+  margin-top: 0.35rem;
+  font-size: 0.72rem;
+  line-height: 1.2;
+  color: #64748b;
+}
+
 .cap-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
