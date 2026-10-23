@@ -100,7 +100,7 @@ color: gray-light
 :: content ::
 
 <div class="who-grid mt-4">
-  <div><strong><mdi-atom /> LHC experiments</strong><span> Chinese ATLAS, CMS and LHCb groups: user certificates, robot certificates, host certificates for sites and services in the WLCG framework.</span></div>
+  <div><strong><mdi-atom /> LHC experiments</strong><span> Chinese ATLAS, CMS, ALICE and LHCb groups: user certificates, robot certificates, host certificates for sites and services in the WLCG framework.</span></div>
   <div><strong><mdi-flask /> Domestic experiments</strong><span> JUNO, Belle II, BESIII and others: grid computing identity for production, analysis and data transfer.</span></div>
   <div><strong><mdi-earth /> International trust</strong><span> As part of the IGTF / APGridPMA trust framework, IHEP-issued identities are recognized by WLCG sites worldwide.</span></div>
 </div>
@@ -114,6 +114,7 @@ The IHEP CA is <b>shared national infrastructure</b>: one trust anchor behind th
 <div class="experiment-logos" aria-label="Experiments supported by the shared computing infrastructure">
   <figure><img src="/experiments/atlas.png" alt="ATLAS" /><figcaption>ATLAS</figcaption></figure>
   <figure><img src="/experiments/cms.png" alt="CMS" /><figcaption>CMS</figcaption></figure>
+  <figure><img src="/experiments/alice.png" alt="ALICE" /><figcaption>ALICE</figcaption></figure>
   <figure><img src="/experiments/lhcb.png" alt="LHCb" /><figcaption>LHCb</figcaption></figure>
   <figure><img src="/experiments/juno.png" alt="JUNO" /><figcaption>JUNO</figcaption></figure>
   <figure><img src="/experiments/belle2.png" alt="Belle II" /><figcaption>Belle II</figcaption></figure>
