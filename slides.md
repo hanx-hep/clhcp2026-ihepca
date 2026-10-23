@@ -101,7 +101,7 @@ color: gray-light
 
 <div class="who-grid mt-4">
   <div><strong><mdi-atom /> LHC experiments</strong><span> Chinese ATLAS, CMS, ALICE and LHCb groups: user certificates, robot certificates, host certificates for sites and services in the WLCG framework.</span></div>
-  <div><strong><mdi-flask /> Domestic experiments</strong><span> JUNO, Belle II, BESIII and others: grid computing identity for production, analysis and data transfer.</span></div>
+  <div><strong><mdi-flask /> Domestic experiments</strong><span> JUNO, Belle II and others: grid computing identity for production, analysis and data transfer; formerly also BESIII.</span></div>
   <div><strong><mdi-earth /> International trust</strong><span> As part of the IGTF / APGridPMA trust framework, IHEP-issued identities are recognized by WLCG sites worldwide.</span></div>
 </div>
 
@@ -118,7 +118,7 @@ The IHEP CA is <b>shared national infrastructure</b>: one trust anchor behind th
   <figure><img src="/experiments/lhcb.png" alt="LHCb" /><figcaption>LHCb</figcaption></figure>
   <figure><img src="/experiments/juno.png" alt="JUNO" /><figcaption>JUNO</figcaption></figure>
   <figure><img src="/experiments/belle2.png" alt="Belle II" /><figcaption>Belle II</figcaption></figure>
-  <figure><img src="/experiments/besiii.png" alt="BESIII" /><figcaption>BESIII</figcaption></figure>
+  <figure><img src="/experiments/besiii.png" alt="BESIII" /><figcaption>BESIII · former</figcaption></figure>
   <figure><img src="/experiments/cepc.png" alt="CEPC" /><figcaption>CEPC · future</figcaption></figure>
 </div>
 
@@ -367,7 +367,7 @@ color: gray-light
 - **Better service** — SSO login, online RA approval, same-day issuance, e-mail notifications
 - **Automation** — EST renewal for hosts, legacy migration, API access for bulk integration
 - **Trust established** — admitted into IGTF 1.145 (Aug 2026); old CA retires at the end of 2026
-- **Shared foundation** — one trust anchor for LHC, JUNO, Belle II, BESIII… and CEPC
+- **Shared foundation** — LHC, JUNO and Belle II; formerly BESIII; future support for CEPC
 
 <AdmonitionType type='note'>
 <mdi-certificate /> Documentation and user guides are published with the CA; user training is provided at collaboration workshops and winter schools.
