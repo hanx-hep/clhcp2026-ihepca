@@ -1,3 +1,12 @@
+.ca-cover-icon {
+  position: absolute;
+  top: 14px;
+  left: 28px;
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+
 .slidev-layout table {
   font-size: 0.92rem;
 }

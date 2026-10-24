@@ -9,9 +9,11 @@ fonts: false
 neversink_string: "CLHCP2026 · Wuhan"
 title: The Upgrade of the China Grid Certification Authority
 titleTemplate: '%s - Xiao Han'
-favicon: /ihep_dci.svg
+favicon: /ihep_grid_ca_icon_refined.svg
 transition: fade
 ---
+
+<img src="/ihep_grid_ca_icon_refined.svg" alt="IHEP Grid CA" class="ca-cover-icon" />
 
 ### The Upgrade of the China Grid Certification Authority
 
