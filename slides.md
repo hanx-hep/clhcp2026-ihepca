@@ -316,6 +316,74 @@ Every issuance notifies both the RA and the applicant — anomalous issuance bec
 </div>
 
 ---
+layout: top-title-two-cols
+color: gray-light
+align: c-lt-lt
+---
+
+:: title ::
+
+# CA monitoring in operation
+
+:: left ::
+
+Three complementary Grafana dashboard views:
+
+- **Status** — container health, certificate issuance and workflow states
+- **Audit** — WebUI, RA and EST access and operation records
+- **Security** — abnormal logins, policy violations and CRL status
+
+Additional views are under active development.
+
+This recording shows the deployed dashboards, rather than a live connection to the CA system.
+
+:: right ::
+
+<figure class="ca-demo-recording">
+  <video src="/d4.monitoring.mp4" aria-label="Recording of CA monitoring dashboards" autoplay loop muted playsinline controls preload="metadata"></video>
+  <figcaption><mdi-monitor-screenshot /> CA monitoring dashboards · recorded demonstration</figcaption>
+</figure>
+
+<!--
+Timing: 0:40
+
+The monitoring is operational, not just a design. The three views cover status, audit and security. Let the recording run briefly and point out the relationship between service health and recorded activity. This is a prerecorded view; it does not expose live access to the CA from the presentation.
+-->
+
+---
+layout: top-title-two-cols
+color: gray-light
+align: c-lt-lt
+---
+
+:: title ::
+
+# A published guide for the full user journey
+
+:: left ::
+
+The CA guide is published in the **IHEP Computing Platform User Manual** and maintained alongside the system.
+
+- **Apply** — user, robot and host certificates
+- **Migrate and renew** — IHEP-2013 personal migration and host certificate automation
+- **Download and use** — PKCS#12 export, browser installation and command-line conversion
+
+Users have a maintained reference beyond workshop training and individual support.
+
+:: right ::
+
+<figure class="ca-demo-recording">
+  <video src="/d5.manual.mp4" aria-label="Recording of the online CA user guide" autoplay loop muted playsinline controls preload="metadata"></video>
+  <figcaption><mdi-book-open-variant /> Online user guide · recorded walkthrough</figcaption>
+</figure>
+
+<!--
+Timing: 0:40
+
+The user documentation is already published in the computing platform manual. The recording illustrates how users can follow the complete journey, from choosing a certificate type to migration, download and installation. Keep this overview short: the conference presentation is not a step-by-step training session.
+-->
+
+---
 layout: section
 color: orange-light
 ---
