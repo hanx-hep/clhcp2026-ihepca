@@ -7,4 +7,5 @@
 - Belle II: https://www.belle2.org/common/logo.png
 - BESIII: logo cropped from the official site header https://english.ihep.cas.cn/images/bes2021_head.jpg (left logo region only).
 - JUNO: existing workspace asset from `28th-junocm-dci/public/images/juno_logo_transparent.png`.
+- HERD: existing workspace asset from `cepc-dci-monitoring/public/images/herd-logo.png`; source https://herd-iam.ihep.ac.cn/resources/images/logos/herd-logo.png.
 - CEPC: existing workspace asset from `cepc-dci-monitoring/public/images/cepc-logo-transparent.png`.
