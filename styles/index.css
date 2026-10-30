@@ -8,7 +8,7 @@
 }
 
 .ca-demo-recording {
-  margin: 0;
+  margin: -1.5rem 0 0;
   text-align: center;
 }
 
@@ -16,7 +16,8 @@
   display: block;
   box-sizing: content-box;
   width: auto;
-  height: 350px;
+  height: auto;
+  max-height: 430px;
   max-width: 100%;
   aspect-ratio: 79 / 96;
   margin: 0 auto;
@@ -27,10 +28,10 @@
 }
 
 .ca-demo-recording figcaption {
-  margin-top: 0.5rem;
+  margin-top: 0.35rem;
   color: #64748b;
-  font-size: 0.8rem;
-  line-height: 1.4;
+  font-size: 0.75rem;
+  line-height: 1.3;
 }
 
 .slidev-layout table {

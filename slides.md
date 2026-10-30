@@ -353,8 +353,8 @@ This recording shows the deployed dashboards, rather than a live connection to t
 :: right ::
 
 <figure class="ca-demo-recording">
-  <video src="/d4.monitoring.mp4" width="1580" height="1920" aria-label="Recording of CA monitoring dashboards" autoplay loop muted playsinline controls preload="metadata"></video>
-  <figcaption><mdi-monitor-screenshot /> CA monitoring dashboards · recorded demonstration</figcaption>
+  <SlidevVideo :src="'./d4.monitoring.mp4?v=20261030'" :poster="'./d4.monitoring-poster.webp'" width="1264" height="1536" aria-label="Recording of CA monitoring dashboards" autoplay loop muted playsinline controls preload="metadata" />
+  <figcaption><mdi-monitor-screenshot /> Recorded CA monitoring · <a :href="'./d4.monitoring.mp4?v=20261030'" target="_blank" rel="noopener noreferrer">Open video</a></figcaption>
 </figure>
 
 <!--
@@ -386,8 +386,8 @@ Users have a maintained reference beyond workshop training and individual suppor
 :: right ::
 
 <figure class="ca-demo-recording">
-  <video src="/d5.manual.mp4" width="1580" height="1920" aria-label="Recording of the online CA user guide" autoplay loop muted playsinline controls preload="metadata"></video>
-  <figcaption><mdi-book-open-variant /> Online user guide · recorded walkthrough</figcaption>
+  <SlidevVideo :src="'./d5.manual.mp4?v=20261030'" :poster="'./d5.manual-poster.webp'" width="1264" height="1536" aria-label="Recording of the online CA user guide" autoplay loop muted playsinline controls preload="metadata" />
+  <figcaption><mdi-book-open-variant /> Recorded user guide · <a :href="'./d5.manual.mp4?v=20261030'" target="_blank" rel="noopener noreferrer">Open video</a></figcaption>
 </figure>
 
 <!--
