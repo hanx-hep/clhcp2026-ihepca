@@ -178,6 +178,111 @@
   line-height: 1.4;
 }
 
+.ca-rollout-timeline {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.3rem;
+  margin-top: 0.25rem;
+}
+
+.ca-timeline-phase {
+  --phase-color: #0e7490;
+  --phase-tint: #ecfeff;
+  position: relative;
+  min-width: 0;
+  border: 1px solid #d9dee7;
+  border-radius: 0.65rem;
+  background: #fff;
+}
+
+.ca-timeline-review {
+  --phase-color: #7e22ce;
+  --phase-tint: #faf5ff;
+}
+
+.ca-timeline-migrate {
+  --phase-color: #c2410c;
+  --phase-tint: #fff7ed;
+}
+
+.ca-timeline-phase:not(:last-child)::after {
+  content: '→';
+  position: absolute;
+  top: 1.45rem;
+  right: -1.1rem;
+  color: #64748b;
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.ca-timeline-heading {
+  padding: 0.8rem 0.95rem;
+  border-radius: 0.65rem 0.65rem 0 0;
+  border-bottom: 1px solid #e2e8f0;
+  background: var(--phase-tint);
+}
+
+.ca-timeline-heading > span {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: var(--phase-color);
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.ca-timeline-heading > strong {
+  display: block;
+  color: #1f2937;
+  font-size: 1.15rem;
+  line-height: 1.25;
+}
+
+.ca-rollout-timeline .ca-timeline-events {
+  margin: 0;
+  padding: 0.95rem 0.9rem 0.55rem 1.25rem;
+  list-style: none;
+}
+
+.ca-rollout-timeline .ca-timeline-events > li {
+  position: relative;
+  margin: 0;
+  padding: 0 0 0.8rem 0.85rem;
+  border-left: 2px solid #cbd5e1;
+  list-style: none;
+}
+
+.ca-rollout-timeline .ca-timeline-events > li:last-child {
+  padding-bottom: 0.4rem;
+  border-left-color: transparent;
+}
+
+.ca-timeline-events > li::before {
+  content: '';
+  position: absolute;
+  top: 0.3rem;
+  left: -0.34rem;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: var(--phase-color);
+}
+
+.ca-timeline-date {
+  display: block;
+  margin-bottom: 0.2rem;
+  color: var(--phase-color);
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.ca-timeline-events > li > span {
+  display: block;
+  color: #374151;
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+
 .cap-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

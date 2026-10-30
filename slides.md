@@ -410,22 +410,34 @@ color: gray-light
 
 :: title ::
 
-# Timeline: from prototype to IGTF accreditation
+# Timeline: development, accreditation, migration
 
 :: content ::
 
-<div style="text-align: center; max-width: 96%; margin: 0.3rem auto;">
-
-```mermaid {scale: 0.55}
-timeline
-    Late 2025 : Core functionality complete
-    2026-02 : First contact with APGridPMA chair
-    2026-03 : ISGC — formal application submitted
-    2026-04~07 : Review period, sustained follow-up
-    2026-08 : IGTF 1.145 admits the IHEP-2026 hierarchy
-    End of 2026 : IHEP-2013 old root expires
-```
-
+<div class="ca-rollout-timeline" aria-label="Chronological phases, read each column from top to bottom, then move right">
+  <section class="ca-timeline-phase ca-timeline-build">
+    <div class="ca-timeline-heading"><span>2025</span><strong>Build &amp; deploy</strong></div>
+    <ol class="ca-timeline-events">
+      <li><strong class="ca-timeline-date">Early 2025</strong><span>OpenXPKI-based architecture selected.</span></li>
+      <li><strong class="ca-timeline-date">Mid-2025</strong><span>Development and testing.</span></li>
+      <li><strong class="ca-timeline-date">Late 2025</strong><span>CA system deployed.</span></li>
+    </ol>
+  </section>
+  <section class="ca-timeline-phase ca-timeline-review">
+    <div class="ca-timeline-heading"><span>February–July 2026</span><strong>Apply &amp; review</strong></div>
+    <ol class="ca-timeline-events">
+      <li><strong class="ca-timeline-date">February 2026</strong><span>First contact with the APGridPMA chair.</span></li>
+      <li><strong class="ca-timeline-date">March 2026</strong><span>Formal application submitted at ISGC.</span></li>
+      <li><strong class="ca-timeline-date">April–July 2026</strong><span>Review and sustained follow-up.</span></li>
+    </ol>
+  </section>
+  <section class="ca-timeline-phase ca-timeline-migrate">
+    <div class="ca-timeline-heading"><span>August–December 2026</span><strong>Accredit &amp; migrate</strong></div>
+    <ol class="ca-timeline-events">
+      <li><strong class="ca-timeline-date">August 2026</strong><span>IHEP-2026 hierarchy included in IGTF 1.145.</span></li>
+      <li><strong class="ca-timeline-date">End of 2026</strong><span>IHEP-2013 root expires: migration deadline.</span></li>
+    </ol>
+  </section>
 </div>
 
 <div class="mt-4">
@@ -433,6 +445,12 @@ timeline
 <b>The end-2026 expiry of the IHEP-2013 root is the hard deadline for this transition.</b> The new CA is accredited and in production; a unified migration notice gives every user a sufficient window to switch.
 </AdmonitionType>
 </div>
+
+<!--
+Timing: 0:55
+
+Read each phase from top to bottom, then move to the next column. In early 2025 we selected the OpenXPKI-based architecture. Development and testing followed in the middle of the year, and the system was deployed at the end of 2025. The middle phase covers the initial APGridPMA contact, the formal ISGC application and subsequent review. The IHEP-2026 hierarchy was included in IGTF 1.145 in August 2026. The final milestone is the end-2026 expiry of the IHEP-2013 root, which sets the migration deadline.
+-->
 
 ---
 layout: top-title
