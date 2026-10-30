@@ -423,6 +423,7 @@ color: gray-light
       <li><strong class="ca-timeline-date">Late 2025</strong><span>CA system deployed.</span></li>
     </ol>
   </section>
+  <div class="ca-timeline-connector" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16m-6-6 6 6-6 6" /></svg></div>
   <section class="ca-timeline-phase ca-timeline-review">
     <div class="ca-timeline-heading"><span>February–July 2026</span><strong>Apply &amp; review</strong></div>
     <ol class="ca-timeline-events">
@@ -431,6 +432,7 @@ color: gray-light
       <li><strong class="ca-timeline-date">April–July 2026</strong><span>Review and sustained follow-up.</span></li>
     </ol>
   </section>
+  <div class="ca-timeline-connector" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16m-6-6 6 6-6 6" /></svg></div>
   <section class="ca-timeline-phase ca-timeline-migrate">
     <div class="ca-timeline-heading"><span>August–December 2026</span><strong>Accredit &amp; migrate</strong></div>
     <ol class="ca-timeline-events">

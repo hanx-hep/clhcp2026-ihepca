@@ -180,8 +180,8 @@
 
 .ca-rollout-timeline {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.3rem;
+  /* Separate arrow tracks prevent overlap regardless of font metrics or slide scaling. */
+  grid-template-columns: minmax(0, 1fr) 1.3rem minmax(0, 1fr) 1.3rem minmax(0, 1fr);
   margin-top: 0.25rem;
 }
 
@@ -205,14 +205,20 @@
   --phase-tint: #fff7ed;
 }
 
-.ca-timeline-phase:not(:last-child)::after {
-  content: '→';
-  position: absolute;
-  top: 1.45rem;
-  right: -1.1rem;
+.ca-timeline-connector {
+  display: grid;
+  align-content: start;
+  justify-items: center;
+  min-width: 0;
+  padding-top: 1.6rem;
   color: #64748b;
-  font-size: 1.3rem;
-  line-height: 1;
+}
+
+.ca-timeline-connector svg {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  max-width: 100%;
 }
 
 .ca-timeline-heading {
