@@ -68,27 +68,38 @@ color: gray-light
 
 :: title ::
 
-# Certificates are identities for distributed computing
+# PKI is the system; CA is its issuer
 
 :: content ::
 
-<AdmonitionType type='info'>
-<mdi-certificate /> A <b>C</b>ertificate <b>A</b>uthority is the trusted entity that issues and manages X.509 digital certificates — the machine-readable identities of a distributed computing infrastructure.
-</AdmonitionType>
+<div class="pki-concepts">
+  <div class="pki-concept">
+    <strong class="pki-term"><mdi-layers-outline /> PKI</strong>
+    <span class="pki-full-name">Public Key Infrastructure</span>
+    <p>The complete trust system: policies, identity checks, certificate issuance, revocation information and relying parties.</p>
+    <p><strong>Registration Authority (RA)</strong>: verifies applicants.</p>
+  </div>
+  <div class="pki-concept">
+    <strong class="pki-term"><mdi-certificate-outline /> CA</strong>
+    <span class="pki-full-name">Certification Authority</span>
+    <p>A trusted issuer <strong>within the PKI</strong>. It digitally signs X.509 certificates that bind verified identities to public keys.</p>
+    <p>The CA is a core part of the PKI, <strong>not the whole system</strong>.</p>
+  </div>
+</div>
 
-**How grid access works:**
+<div class="pki-talk-scope"><strong>In this talk:</strong> “IHEP CA” names the authority and its service; “new PKI” describes the wider trust infrastructure being upgraded.</div>
 
-```text
-User ── certificate (issued by IHEP CA, ~1 year)
-     ── VOMS proxy (short-lived credential, hours)
-     ── grid jobs, storage, services
-```
+<div class="pki-grid-access" aria-label="How PKI supports grid access">
+  <div><strong>1 · Authenticate</strong><span>Clients prove control of a private key, often using a short-lived proxy.</span></div>
+  <div><strong>2 · Add VO attributes</strong><span>VOMS adds collaboration membership and roles to the proxy.</span></div>
+  <div><strong>3 · Authorize access</strong><span>Sites apply their own access policies — a certificate alone does not grant access.</span></div>
+</div>
 
-**The relying side:**
+<!--
+Timing: 1:00
 
-- Sites and services verify the certificate chain → **the CA vouches for the identity**
-- VOMS maps the certificate to experiment roles (e.g. `/atlas`, `/belle`)
-- Lost trust in the CA ⇒ the whole authentication chain fails
+CA and PKI are not alternative levels of formality. PKI is the complete infrastructure and governance that make public-key identities trustworthy. The CA is the issuer within that infrastructure; the RA checks applicants. IHEP CA is therefore an appropriate name for the service and for the talk title, while the upgrade modernizes the broader PKI. In the grid, authentication proves identity, VOMS provides collaboration attributes, and relying sites decide authorization. A certificate alone does not automatically grant access to computing resources.
+-->
 
 ---
 layout: top-title
