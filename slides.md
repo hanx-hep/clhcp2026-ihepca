@@ -25,7 +25,7 @@ transition: fade
 
 <br>
 
-##### October 28 – November 1, 2026 · Wuhan
+##### November 1, 2026 · Wuhan
 
 <br>
 
@@ -212,7 +212,7 @@ color: gray-light
 
 :: title ::
 
-# IHEP-developed PKI, built on OpenXPKI
+# System development
 
 :: content ::
 
@@ -253,7 +253,7 @@ color: gray-light
 
 :: title ::
 
-# IHEP PKI: online services for users and RA
+# System features
 
 :: content ::
 
