@@ -212,11 +212,52 @@ color: gray-light
 
 :: title ::
 
-# Complete online capabilities, for users and RA
+# IHEP-developed PKI, built on OpenXPKI
 
 :: content ::
 
-Built on <b>OpenXPKI</b> — enterprise-grade open-source PKI: workflow-driven lifecycle, EST / SCEP / ACME enrollment, HSM-ready crypto layer.
+<div class="ca-development-intro">We built our PKI on open-source <strong>OpenXPKI</strong>, adding IHEP-specific workflows, integrations and operations.</div>
+
+<div class="ca-development-table">
+
+| Repository | Commits | Files | Added lines | IHEP development |
+|---|---:|---:|---:|---|
+| **openxpki-config** | 85 | 149 | **+7,089** | Workflows, authentication, profiles, WebUI |
+| **openxpki-docker** | 41 | 20 | **+2,734** | Deployment, scripts and documentation |
+| **monitoring** | 16 | 13 | **+643** | PKI health checks, logs and retention |
+| **openxpki-rpm** | 1 | 25 | **+1,149** | RPM specs, container builds and patches |
+
+</div>
+
+<div class="ca-development-method">Prelaunch snapshot; excludes generated WebUI assets and CPAN dependency lockfiles (~18k lines).</div>
+
+<div class="check-grid ca-development-grid">
+  <div><mdi-code-braces /><div><strong>Source-level patches</strong><span>8 Perl modules · +1,470 lines in authentication, issuance and migration.</span></div></div>
+  <div><mdi-file-cog-outline /><div><strong>YAML workflows &amp; profiles</strong><span>68 files · +4,284 lines for workflows, notifications and EST.</span></div></div>
+  <div><mdi-docker /><div><strong>Deployment &amp; operations</strong><span>Compose customization + 10 scripts for CRLs, renewal and reminders.</span></div></div>
+  <div><mdi-monitor-dashboard /><div><strong>Monitoring &amp; packaging</strong><span>Dedicated repositories for PKI monitoring and RPM builds.</span></div></div>
+</div>
+
+<!--
+Timing: 0:45
+
+OpenXPKI is our maintained open-source foundation. On top of it, we developed and integrated the IHEP PKI: local identity integration, approval workflows, legacy migration, lifecycle automation and operational tooling. The table shows the scope of that development, with the changes kept under version control. The next slide presents the capabilities delivered by our system, rather than a list of upstream OpenXPKI features.
+
+Reference: the figures are the snapshot recorded in the prelaunch report, not a new repository recount. The openxpki-config baseline is 0b140fd and the openxpki-docker baseline is c0b9286; monitoring and openxpki-rpm are counted from repository creation. Generated WebUI assets and CPAN dependency lockfiles, approximately 18,000 lines, are excluded. The Perl and YAML figures are subsets of the repository figures, not additional lines to add to them.
+-->
+
+---
+layout: top-title
+color: gray-light
+---
+
+:: title ::
+
+# IHEP PKI: online services for users and RA
+
+:: content ::
+
+Our deployed PKI provides online certificate services for users, hosts and RA operators.
 
 <div class="check-grid mt-2">
   <div><mdi-account-key /><div><strong>Online request, automatic issuance</strong><span> IHEP-account login, online request for user / robot / host certificates; server-side RSA 4096 keys, automatic issuance after RA approval.</span></div></div>
@@ -226,6 +267,12 @@ Built on <b>OpenXPKI</b> — enterprise-grade open-source PKI: workflow-driven l
   <div><mdi-bell-ring-outline /><div><strong>Lifecycle e-mail notifications</strong><span> Pending, issued, rejected and expiring-soon events notify applicants and the RA automatically.</span></div></div>
   <div><mdi-shield-account /><div><strong>RA online workbench</strong><span> Approval queue, certificate search, workflow tracking, batch approval — all logged and auditable.</span></div></div>
 </div>
+
+<!--
+Timing: 0:55
+
+These are the capabilities of the deployed IHEP system. Researchers request certificates through their IHEP account, and the RA reviews and approves them online. We added migration paths for existing users and hosts, automated host renewal and service reloads, online revocation, scheduled CRL publication and lifecycle notifications. Together these form an integrated service for users and operators, built on the development work shown on the preceding slide.
+-->
 
 ---
 layout: top-title
@@ -244,21 +291,26 @@ color: gray-light
 graph LR
     User[User] -->|HTTPS| WebUI[WebUI]
     User -->|EST/API| API[Automation Interface]
-    WebUI --> Client[OpenXPKI Client]
-    API --> Client
-    Client --> Server[OpenXPKI Server]
+    WebUI --> Server[Server]
+    API --> Server
     Server --> DB[(MariaDB)]
     Server --> LDAP[LDAP Auth]
     Server --> Mail[Email Notification]
-    Server --> Download[download]
-    Download --> RP[Relying Party]
+    Server --> Publish[Certificates / CRLs]
+    Publish --> RP[Grid sites / services]
 ```
 
 </div>
 
 <div class="text-center mt-2">
-<b>Layers:</b> user → access (WebUI / EST / API) → business logic (workflow, RA) → data → publishing (certificates, CRL)
+One PKI backend handles approval workflows, certificate issuance and lifecycle management.
 </div>
+
+<!--
+Timing: 0:35
+
+This is a functional view of the deployed system. WebUI and automation requests reach one PKI backend, shown simply as Server. Internal OpenXPKI client and server processes are deliberately combined here. The backend coordinates identity integration, certificate workflows, stored records, notifications and public certificate and CRL distribution. Grid sites use the published trust information when authenticating users and services.
+-->
 
 ---
 layout: top-title-two-cols
