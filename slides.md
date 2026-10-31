@@ -33,6 +33,12 @@ transition: fade
 
 <img src="/ihepcc.png" style="position:absolute;top:5px;right:5px;width:250px;opacity:1;z-index:1;" />
 
+<!--
+Timing: 0:30
+
+Good afternoon. I am Xiao Han from the IHEP Computing Center. Users know our grid certificate service as IHEP CA. Today I will present the upgrade of the PKI infrastructure behind that service, explaining its role in distributed computing, the limits of the old system, and the improvements in the new deployment.
+-->
+
 ---
 layout: side-title
 title: Table of Contents
@@ -68,37 +74,43 @@ color: gray-light
 
 :: title ::
 
-# PKI is the system; CA is its issuer
+# A trust infrastructure for grid computing
 
 :: content ::
 
-<div class="pki-concepts">
-  <div class="pki-concept">
-    <strong class="pki-term"><mdi-layers-outline /> PKI</strong>
-    <span class="pki-full-name">Public Key Infrastructure</span>
-    <p>The complete trust system: policies, identity checks, certificate issuance, revocation information and relying parties.</p>
-    <p><strong>Registration Authority (RA)</strong>: verifies applicants.</p>
-  </div>
-  <div class="pki-concept">
-    <strong class="pki-term"><mdi-certificate-outline /> CA</strong>
-    <span class="pki-full-name">Certification Authority</span>
-    <p>A trusted issuer <strong>within the PKI</strong>. It digitally signs X.509 certificates that bind verified identities to public keys.</p>
-    <p>The CA is a core part of the PKI, <strong>not the whole system</strong>.</p>
+<div class="pki-intro">IHEP operates a complete <strong>Public Key Infrastructure (PKI)</strong>: the trust system used to issue, manage and validate digital certificates for HEP computing.</div>
+
+<div class="pki-system">
+  <div class="pki-system-label">PKI system deployed at IHEP</div>
+  <div class="pki-service-flow" aria-label="Identity checks, CA certificate issuance, and lifecycle services within the PKI">
+    <div class="pki-flow-step">
+      <strong>Identity checks</strong>
+      <span class="pki-step-detail">Verify the identities of users and service owners.</span>
+    </div>
+    <div class="pki-flow-connector" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16m-6-6 6 6-6 6" /></svg></div>
+    <div class="pki-flow-step pki-ca-step">
+      <strong>IHEP CA</strong>
+      <span class="pki-issuer-full-name">Certification Authority</span>
+      <span class="pki-step-detail">Signs X.509 certificates binding verified identities to public keys.</span>
+    </div>
+    <div class="pki-flow-connector" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16m-6-6 6 6-6 6" /></svg></div>
+    <div class="pki-flow-step">
+      <strong>Lifecycle services</strong>
+      <span class="pki-step-detail">Renew certificates; publish revocation and status information.</span>
+    </div>
   </div>
 </div>
 
-<div class="pki-talk-scope"><strong>In this talk:</strong> “IHEP CA” names the authority and its service; “new PKI” describes the wider trust infrastructure being upgraded.</div>
-
-<div class="pki-grid-access" aria-label="How PKI supports grid access">
-  <div><strong>1 · Authenticate</strong><span>Clients prove control of a private key, often using a short-lived proxy.</span></div>
-  <div><strong>2 · Add VO attributes</strong><span>VOMS adds collaboration membership and roles to the proxy.</span></div>
-  <div><strong>3 · Authorize access</strong><span>Sites apply their own access policies — a certificate alone does not grant access.</span></div>
+<div class="pki-service-value" aria-label="Value for physics computing">
+  <div><strong>Researchers &amp; grid jobs</strong><span>User and robot certificates identify researchers and automated tasks.</span></div>
+  <div><strong>Services &amp; data</strong><span>Host certificates support authenticated connections to grid services.</span></div>
+  <div><strong>Cross-site trust</strong><span>IGTF trust distribution supports authentication across participating sites.</span></div>
 </div>
 
 <!--
 Timing: 1:00
 
-CA and PKI are not alternative levels of formality. PKI is the complete infrastructure and governance that make public-key identities trustworthy. The CA is the issuer within that infrastructure; the RA checks applicants. IHEP CA is therefore an appropriate name for the service and for the talk title, while the upgrade modernizes the broader PKI. In the grid, authentication proves identity, VOMS provides collaboration attributes, and relying sites decide authorization. A certificate alone does not automatically grant access to computing resources.
+Our infrastructure provides the trusted digital identities needed by distributed physics computing. IHEP runs the complete PKI system: policies, identity checks, certificate issuance, lifecycle management and trust information. Within this system, the CA signs certificates that bind a verified identity to a public key. Researchers and automated tasks use user and robot certificates; host certificates identify service endpoints. IGTF distributes the trust anchors so participating sites can authenticate these identities. This supports job submission and data access across sites. Authentication establishes identity; experiment and site policies still decide access rights. The next slide shows which experiments use this service.
 -->
 
 ---
