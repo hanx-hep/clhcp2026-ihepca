@@ -128,7 +128,7 @@ color: gray-light
 
 <div class="who-grid mt-4">
   <div><strong><mdi-atom /> LHC experiments</strong><span> Chinese ATLAS, CMS, ALICE and LHCb groups: user certificates, robot certificates, host certificates for sites and services in the WLCG framework.</span></div>
-  <div><strong><mdi-flask /> Domestic experiments</strong><span> JUNO, HERD, Belle II and others: grid computing identity for production, analysis and data transfer; formerly also BESIII.</span></div>
+  <div><strong><mdi-flask /> Non-LHC experiments</strong><span> JUNO, HERD, Belle II and others: grid computing identity for production, analysis and data transfer; formerly also BESIII.</span></div>
   <div><strong><mdi-earth /> International trust</strong><span> As part of the IGTF / APGridPMA trust framework, IHEP-issued identities are recognized by WLCG sites worldwide.</span></div>
 </div>
 
