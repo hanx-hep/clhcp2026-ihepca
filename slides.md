@@ -107,6 +107,8 @@ color: gray-light
   <div><strong>Cross-site trust</strong><span>IGTF trust distribution supports authentication across participating sites.</span></div>
 </div>
 
+<div class="pki-trust-takeaway"><strong>Lost trust in the CA ⇒ the whole authentication chain fails.</strong></div>
+
 <!--
 Timing: 1:00
 
